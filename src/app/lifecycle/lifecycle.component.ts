@@ -45,18 +45,25 @@ export class LifecycleComponent
     console.log(changes);
   }
 
+  // ngDoCheck detect changes in ANY PART of the APPLICATION
+  // it's called alot
   ngDoCheck() {
     console.log('ngDoCheck');
   }
 
+// content: is any content proyected into a view <ng-content/>
+// it's called once any proyected content has been initialized
   ngAfterContentInit() {
     console.log('ngAfterContentInit');
   }
 
+  // called when content has been checked by angular's change detection mechanism
   ngAfterContentChecked() {
     console.log('ngAfterContentChecked');
   }
 
+
+  // view: is its template.
   ngAfterViewInit() {
     console.log('ngAfterViewInit');
   }
